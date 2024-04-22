@@ -1,0 +1,37 @@
+{
+  "name": "node-hono-drizzle-sql",
+  "version": "0.1.0",
+  "description": "This is a simple boilerplate of a Node app with Hono, Drizzle and SQL",
+  "main": "src/index.ts",
+  "author": "Md. Minar Munshi",
+  "license": "ISC",
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "hono",
+    "drizzle",
+    "postgreSQL"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "migrations:generate": "drizzle-kit generate:pg --config=drizzle.config.ts",
+    "migrations:push": "drizzle-kit push:pg --config=drizzle.config.ts",
+    "migrations:drop": "drizzle-kit drop --config=drizzle.config.ts",
+    "studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.11.0",
+    "@t3-oss/env-core": "^0.10.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.9",
+    "hono": "^4.2.6",
+    "postgres": "^3.4.4",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "drizzle-kit": "^0.20.17",
+    "pg": "^8.11.5",
+    "tsx": "^4.7.1"
+  }
+}
